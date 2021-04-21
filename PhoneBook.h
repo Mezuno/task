@@ -3,12 +3,12 @@ class PhoneBook
 {
 public:
 
-	int addNumber(std::string name, std::string number);
+	int addNumber(const std::string &name, const  std::string &number);
 
-	void showList(std::string filename);
+	void showList(const std::string &filename);
 
-	void searchNumber(std::string name);
+	void searchNumber(const std::string &name);
 
-	void searchName(std::string number);
+	void searchName(const std::string &number);
 
 };

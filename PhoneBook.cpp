@@ -6,7 +6,7 @@
 
 using namespace std;
 
-int PhoneBook::addNumber(string name, string number)
+int PhoneBook::addNumber(const string &name, const  string &number)
 {
 	fstream fs("phonebook.txt", ios_base::app);
 
@@ -21,7 +21,7 @@ int PhoneBook::addNumber(string name, string number)
 	return -1;
 }
 
-void PhoneBook::showList(string filename)
+void PhoneBook::showList(const string &filename)
 {
 	cout << endl;
 	fstream fs(filename, ios_base::in);
@@ -36,7 +36,7 @@ void PhoneBook::showList(string filename)
 	cout << endl;
 }
 
-void PhoneBook::searchNumber(string name)
+void PhoneBook::searchNumber(const string &name)
 {
 	cout << endl;
 	fstream fs("phonebook.txt", ios::in | ios::out | ios::app);
@@ -56,7 +56,7 @@ void PhoneBook::searchNumber(string name)
 	cout << endl;
 }
 
-void PhoneBook::searchName(string number)
+void PhoneBook::searchName(const string &number)
 {
 	cout << endl;
 	fstream fs("phonebook.txt", ios::in | ios::out | ios::app);
